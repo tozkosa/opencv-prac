@@ -20,33 +20,33 @@ def main():
         st.text("Original Image")
         st.image(our_image)
 
-    if enhance_type == 'Gray-Scale':
-        new_image = np.array(our_image.convert('RGB'))
-        img = cv2.cvtColor(new_image, 1)
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        st.text("Gray-Scale Image")
-        st.image(gray)
-    
-    if enhance_type == 'Contrast':
-        c_rate = st.sidebar.slider("Contrast", 0.5,3.5)
-        enhancer = ImageEnhance.Contrast(our_image)
-        img_output = enhancer.enhance(c_rate)
-        st.image(img_output)
+        if enhance_type == 'Gray-Scale':
+            new_image = np.array(our_image.convert('RGB'))
+            img = cv2.cvtColor(new_image, 1)
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            st.text("Gray-Scale Image")
+            st.image(gray)
 
-    if enhance_type == 'Brightness':
-        c_rate = st.sidebar.slider("Brightness", 0.5,3.5)
-        enhancer = ImageEnhance.Brightness(our_image)
-        img_output = enhancer.enhance(c_rate)
-        st.image(img_output)
+        if enhance_type == 'Contrast':
+            c_rate = st.sidebar.slider("Contrast", 0.5,3.5)
+            enhancer = ImageEnhance.Contrast(our_image)
+            img_output = enhancer.enhance(c_rate)
+            st.image(img_output)
 
-    if enhance_type == "Blurring":
-        new_image = np.array(our_image.convert('RGB'))
-        blur_rate = st.sidebar.slider("Blurring", 0.5,3.5)
-        img = cv2.cvtColor(new_image, 1)
-        blur_img = cv2.GaussianBlur(img, (11,11),blur_rate)
-        st.text("Blurred Image")
-        st.image(blur_img)
-    else: st.image(our_image,width=300)
+        if enhance_type == 'Brightness':
+            c_rate = st.sidebar.slider("Brightness", 0.5,3.5)
+            enhancer = ImageEnhance.Brightness(our_image)
+            img_output = enhancer.enhance(c_rate)
+            st.image(img_output)
+
+        if enhance_type == "Blurring":
+            new_image = np.array(our_image.convert('RGB'))
+            blur_rate = st.sidebar.slider("Blurring", 0.5,3.5)
+            img = cv2.cvtColor(new_image, 1)
+            blur_img = cv2.GaussianBlur(img, (11,11),blur_rate)
+            st.text("Blurred Image")
+            st.image(blur_img)
+        else: st.image(our_image,width=300)
 
 
 if __name__ == '__main__':
