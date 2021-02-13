@@ -9,7 +9,7 @@ def load_image(img):
 
 
 def main():
-    st.title("Aiphotec prototype")
+    st.title("Aiphotec prototype :sunglasses: :bow:")
     st.text("Build with Streamlit and OpenCV")
 
     enhance_type = st.sidebar.radio("Enhance Type", ["Original", "Gray-Scale", "Contrast", "Brightness", "Blurring"])
