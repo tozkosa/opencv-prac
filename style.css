@@ -1,0 +1,32 @@
+body {
+    color: #fff;
+    /* background-color: #4F8BF9; */
+    background-color: #383f4d;
+}
+
+/* .sidebar .sidebar-content {
+    background-color:cadetblue;
+    color: white;
+} */
+
+.css-1aumxhk {
+    /* background-color: #011839; */
+    background-color: #0ac2c9;
+    background-image: none;
+    color: #ffffff
+}
+
+.stButton>button {
+    /* color: #4F8BF9; */
+    color: #383f4d;
+    background-color:#0ac2c9;
+    /* border-radius: 50%; */
+    /* border-radius: 20px; */
+    /* height: 4em; */
+    width: 6em;
+    font-size: large;
+}
+
+.stTextInput>div>div>input {
+    color: #4F8BF9;
+}
